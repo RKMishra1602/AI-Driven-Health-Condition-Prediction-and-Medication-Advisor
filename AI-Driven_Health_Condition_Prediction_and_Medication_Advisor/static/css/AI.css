@@ -1,0 +1,369 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Sticky footer layout */
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body>footer {
+  margin-top: auto;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #74d2ca, #d4f8e8);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ====== Modern Navbar Styling ====== */
+
+/* Navbar Container */
+/* ====== Techi Gradient Navbar ====== */
+
+/* Navbar Container */
+.navbar {
+  background: linear-gradient(135deg, #001f33 0%, #00334d 40%, #00d4ff 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  padding: 0.8rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.2rem;
+  /* Adjust thickness */
+  background: linear-gradient(90deg, #ffffffff, #ffffffff, #ffffffff, #ffffffff);
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+  /* Optional soft glow */
+}
+
+/* On Scroll Effect - darker tech look */
+.navbar.scrolled {
+  background: linear-gradient(135deg, #000c14 0%, #002233 50%, #009dff 100%);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Brand Logo */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: #00f5c8 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+  color: #00e1ff !important;
+}
+
+.navbar-brand img {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  border: 2px solid #00e1ff;
+  box-shadow: 0 0 12px rgba(0, 225, 255, 0.5);
+}
+
+/* Nav Links */
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  color: #ffffff !important;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #00f5c8, #00d4ff);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #00f5c8 !important;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.7rem 1.2rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .nav-link {
+    margin: 0.5rem 0;
+    display: block;
+  }
+}
+
+/* Header Title */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #004d40;
+}
+
+/* Card Form Section */
+.container .card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elements */
+input[type="text"] {
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  flex: 1;
+  transition: box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 150, 136, 0.4);
+}
+
+/* Speech Mic Button */
+#startSpeechRecognition {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+#startSpeechRecognition:hover {
+  background-color: #004d40;
+}
+
+/* Predict Button */
+button[type="submit"] {
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 30px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #2bc0e4, #eaecc6);
+  color: #004d40;
+}
+
+/* Utility Buttons */
+.btn-teal {
+  background-color: #00796b;
+  color: white;
+  border: none;
+}
+
+.btn-teal:hover {
+  background-color: #004d40;
+  color: white;
+}
+
+/* Centered Titles */
+.text-center h5 {
+  color: #00796b;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .container .card {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  input[type="text"] {
+    font-size: 15px;
+    padding: 0.6rem 1.2rem;
+  }
+
+  button[type="submit"] {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+}
+
+.symptom-note {
+  background-color: #e0f7f5;
+  color: #004d40;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* ===== Base Tech Button Style ===== */
+.toggle-button {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 20px 10px 0;
+  width: 160px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ===== Unique Tech Gradients for Each ===== */
+.btn-disease {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.btn-disease:hover {
+  background: linear-gradient(135deg, #1c3b49, #285e75, #3f88a6);
+  box-shadow: 0 0 12px #3f88a6;
+}
+
+.btn-description {
+  background: linear-gradient(135deg, #283c86, #45a247);
+}
+
+.btn-description:hover {
+  background: linear-gradient(135deg, #3b5bd8, #56d562);
+  box-shadow: 0 0 12px #56d562;
+}
+
+.btn-precaution {
+  background: linear-gradient(135deg, #42275a, #734b6d);
+}
+
+.btn-precaution:hover {
+  background: linear-gradient(135deg, #5f3c83, #8f5aa0);
+  box-shadow: 0 0 12px #8f5aa0;
+}
+
+.btn-medications {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+.btn-medications:hover {
+  background: linear-gradient(135deg, #ff6a44, #ff3b8b);
+  box-shadow: 0 0 12px #ff3b8b;
+}
+
+.btn-workouts {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.btn-workouts:hover {
+  background: linear-gradient(135deg, #1ab8a3, #5efc9b);
+  box-shadow: 0 0 12px #5efc9b;
+}
+
+.btn-diets {
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+
+.btn-diets:hover {
+  background: linear-gradient(135deg, #ffae3d, #ffde47);
+  box-shadow: 0 0 12px #ffde47;
+}
+
+/* ===== Tech-Themed Footer ===== */
+.tech-footer {
+  background: linear-gradient(135deg, #001f33 0%, #00334d 40%, #00d4ff 100%);
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+  border-top: 2px solid rgba(0, 212, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Optional animated glowing line */
+.tech-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 2px;
+  background: linear-gradient(90deg, #ffffffff, #ffffffff, #ffffffff, #ffffffff);
+  /*animation: glowline 3s linear infinite;*/
+}
+
+@keyframes glowline {
+  0% {
+    left: -50%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+.tech-footer p {
+  margin: 0;
+  color: #d4f8e8;
+}
+
+.tech-footer p:hover {
+  color: #00f5c8;
+  text-shadow: 0 0 5px rgba(0, 245, 200, 0.7);
+}
